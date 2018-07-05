@@ -70,3 +70,26 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+
+@*
+@using (Html.BeginForm("Salvar", "Funcionario", FormMethod.Post, new { name = "frmFuncionario", id = "frmFuncionario" }))
+{
+
+	<div class="form-group col-md-4">
+		@Html.LabelFor(model => model.ComboSupervisor, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-12">
+			@Html.DropDownListFor(model => model.IdSupervisor, Model.ComboSupervisor, new { @class = "form-control" })
+			@Html.ValidationMessageFor(model => model.ComboSupervisor, "", new { @class = "text-danger" })
+		</div>
+	</div>
+				
+	<div class="form-group row">
+		<div class="col-md-offset-2 col-md-12 text-md-right">
+			<a href="javascript:;" class="btn btn-primary" id="btSalvar">Salvar</a>
+			<a href="javascript:;" class="btn btn-danger" id="btVoltar" onclick="Funcionario.VoltarFuncionario();">Voltar</a>
+		</div>
+	</div>
+
+}
+*@
